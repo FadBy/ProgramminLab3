@@ -63,9 +63,9 @@ public class ObjectsHolder {
         }));
         houses.add(new House(roofs.get(3), 4, new Window[0]));
         street = new Street(new Decor[] {
-            decors.get(6),
-            decors.get(7),
-            decors.get(8)
+                decors.get(6),
+                decors.get(7),
+                decors.get(8)
         });
         malish = new Malish(houses);
         karlson = new Karlson();

@@ -2,20 +2,29 @@ package SceneObjects;
 
 public abstract class SceneObject {
     protected String name;
+    private int id;
 
     public String getName() {
         return name;
     }
 
+    public int getId(){
+        return id;
+    }
+
     public SceneObject(String name) {
         this.name = name;
+        id = IdGetter.getNextId();
     }
 
     @Override
     public boolean equals(Object obj) {
+        if (obj == null){
+            return false;
+        }
         if (obj.getClass() == getClass()) {
             SceneObject sceneObj = (SceneObject) obj;
-            if (sceneObj.name == name) {
+            if (sceneObj.id == id) {
                 return true;
             }
         }
@@ -24,11 +33,11 @@ public abstract class SceneObject {
 
     @Override
     public String toString() {
-        return name;
+        return id + ": " + name;
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        return id;
     }
 }

@@ -11,15 +11,15 @@ public class Scene {
         objHolder.loadEvents(eventSystem);
     }
 
-    public void Run(){
+    public void Run() {
         eventSystem.StartAction();
     }
 
-    public TimeOfDay getTimeOfDay(){
+    public TimeOfDay getTimeOfDay() {
         return timeOfDay;
     }
 
-    public boolean getDangerous(){
+    public boolean getDangerous() {
         return dangerous;
     }
 }
