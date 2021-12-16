@@ -1,0 +1,23 @@
+@startuml SceneObjects
+SceneObject <|-- Decor
+' Sound <-- Decor
+Building <|.. House
+SceneObject <|-- House
+SceneObject <|-- Roof
+' Roof <-- House
+' Window <-- House
+SceneObject <|-- Karlson
+Actable <|.. Karlson
+' Sound <-- Karlson
+SceneObject <|-- Malish
+Actable <|.. Malish
+' House <-- Malish
+' Roof <-- Malish
+SceneObject <|-- Roof
+SceneObject <|-- Street
+Actable <|.. Street
+' Decor <-- Street
+SceneObject <|-- Window
+Actable <|.. Window
+' Decor <-- Window
+@enduml

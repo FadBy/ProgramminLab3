@@ -1,0 +1,8 @@
+@startuml Core
+Scene <-- Main
+ObjectsHolder <-- Scene
+EventSystem <-- Scene
+Actable <-- EventSystem
+SceneObjects <-- ObjectsHolder
+EventSystem o-- ObjectsHolder
+@enduml
