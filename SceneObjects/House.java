@@ -35,7 +35,7 @@ public class House extends SceneObject implements Building {
         }
         if (object.getClass() == this.getClass()) {
             House other = (House) object;
-            if (hashCode() == other.hashCode()) {
+            if (windows.equals(other.windows) && coord == other.coord && roof.equals(other.roof)){
                 return true;
             }
         }

@@ -21,7 +21,7 @@ public class Decor extends SceneObject {
         }
         if (object.getClass() == this.getClass()) {
             Decor decor = (Decor) object;
-            if (name == decor.name && soundText == decor.soundText) {
+            if (name.equals(decor.name) && soundText.equals(decor.soundText)) {
                 return true;
             }
         }
