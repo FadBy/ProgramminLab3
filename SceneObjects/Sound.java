@@ -1,5 +1,8 @@
 package SceneObjects;
 
+import java.util.ArrayList;
+import java.util.function.Function;
+
 public class Sound {
     private String text;
     private String source;
@@ -12,5 +15,4 @@ public class Sound {
     public void play() {
         System.out.println(this.source + ": " + this.text);
     }
-
 }

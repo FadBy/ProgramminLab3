@@ -1,7 +1,5 @@
 package SceneObjects;
 
-import javax.naming.ldap.HasControls;
-
 public class House extends SceneObject implements Building {
     private Roof roof;
     private Window[] windows;
@@ -31,13 +29,13 @@ public class House extends SceneObject implements Building {
     }
 
     @Override
-    public boolean equals(Object object){
-        if (object == null){
+    public boolean equals(Object object) {
+        if (object == null) {
             return false;
         }
-        if (object.getClass() == this.getClass()){
-            House other = (House)object;
-            if (hashCode() == other.hashCode()){
+        if (object.getClass() == this.getClass()) {
+            House other = (House) object;
+            if (hashCode() == other.hashCode()) {
                 return true;
             }
         }
@@ -45,16 +43,16 @@ public class House extends SceneObject implements Building {
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         int sum = roof.hashCode() + coord;
-        for (Window window : windows){
+        for (Window window : windows) {
             sum += window.hashCode();
         }
         return sum;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return name + ": " + coord;
     }
 }

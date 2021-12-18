@@ -21,4 +21,28 @@ public class Window extends SceneObject implements Actable {
         }
         return true;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null) {
+            return false;
+        }
+        if (object.getClass() == this.getClass()) {
+            Window window = (Window) object;
+            if (window.decor == decor && window.isOpened == isOpened) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return decor.hashCode() + (isOpened ? 1 : 0);
+    }
+
+    @Override
+    public String toString() {
+        return (isOpened ? "Открытое" : "Закрытое") + "окно: " + decor.toString();
+    }
 }

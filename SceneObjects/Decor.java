@@ -15,15 +15,25 @@ public class Decor extends SceneObject {
     }
 
     @Override
-    public boolean equals(Object object){
-        if (object == null){
+    public boolean equals(Object object) {
+        if (object == null) {
             return false;
         }
-        if (object.getClass() == this.getClass()){
-            Decor decor = (Decor)object;
-            if (name == decor.name && soundText == decor.soundText){
-                
+        if (object.getClass() == this.getClass()) {
+            Decor decor = (Decor) object;
+            if (name == decor.name && soundText == decor.soundText) {
+                return true;
             }
         }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() + soundText.hashCode();
+    }
+
+    public String toString() {
+        return "Декор: " + name + " - " + soundText;
     }
 }
