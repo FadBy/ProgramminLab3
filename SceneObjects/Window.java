@@ -29,9 +29,7 @@ public class Window extends SceneObject implements Actable {
         }
         if (object.getClass() == this.getClass()) {
             Window window = (Window) object;
-            if (window.decor.equals(decor) && window.isOpened == isOpened) {
-                return true;
-            }
+            return window.decor.equals(decor) && window.isOpened == isOpened;
         }
         return false;
     }
